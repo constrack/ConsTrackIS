@@ -1,0 +1,79 @@
+body {
+	padding-top: 50px;
+	color: #959595;
+	font-family:Arial Black
+	}
+	
+	header {
+		position: relative;
+		width: 100%;
+		padding:10%;
+		min-height:auto;
+		text-align:center;
+		color: whitesmoke;
+		background-image: url('https://dac.digital/wp-content/uploads/2023/09/AdobeStock_605915185-920x516-optimized.jpeg');
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		-o-background-size: cover;
+	}
+	.intro {
+		color: black;
+		background-color: yellowgreen;
+		padding: 100px 0;
+		text-align: center;
+	}
+	
+	.content {
+		padding: 100px 0;
+	}
+	
+	.content-2 {
+		color: black;
+		background-color: #222;
+	}
+	
+	.content-3 {
+		padding: 20px 0 40px;
+		text-align: center;}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	}
+	
+.feature {
+	background: yellowgreen linear-gradient(to bottom, greenyellow, olivedrab);
+	color: black;
+	}
+
+#feature-carousel {
+	min-height: 250px;
+	}
+	
+.article-intro {
+    margin-bottom: 25px;
+}
+
+.footer-blurb {
+    padding: 30px 0;
+    background-color: yellowgreen;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 30px;
+    }
+ 
+.small-print {
+	background-color: #fff;
+	padding: 30px 0;
+}
+
+.feature,
+.page-intro,
+.article-intro,
+.footer-blurb,
+.small-print {
+	text-align: center;
+	}
