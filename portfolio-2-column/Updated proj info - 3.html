@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="Proj info.html" class="btn btn-primary btn-lg">BACK</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Report</title>
+<style>
+    body {
+        background-color: yellowgreen;
+        font-family: "Arial Black", Arial, sans-serif;
+        color: black;
+    }
+    .container {
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1500px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: black;
+        color: white;
+    }
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: yellowgreen;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Inventory Report</h2>
+
+    <p><strong>Project Name:</strong> <input type="text" id="project_name" value="[Project Name]"></p>
+
+
+    <hr>
+
+    <h3>Inventory Summary:</h3>
+    <ul>
+        <li><strong>Total Inventory Value(PHP):</strong> <input type="text" id="total_inventory_value" value=""></li>
+        <li><strong>Total Items in Stock:</strong> <input type="text" id="total_items_in_stock" value="88"></li>
+        <li><strong>Total Number of Item Types:</strong> <input type="text" id="total_item_types" value="6"></li>
+    </ul>
+
+    <hr>
+
+    <h3>Inventory Details:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Consumed</th>
+                <th>Unit Price (PHP)</th>
+                <th>Total Value (PHP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="INV-001" id="item_code_1" value="INV-001"></td>
+                <td><input type="text" id="description_1" value="Shovel"></td>
+                <td><input type="text" id="quantity_1" value="10"></td>
+                <td><input type="text" id="consumed_1" value="NONE"></td>
+                <td><input type="text" id="unit_price_1" value="420.00"></td>
+                <td><input type="text" id="total_value_1" value="4,200.00"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="item_code_2" value="INV-002"></td>
+                <td><input type="text" id="description_2" value="Spade"></td>
+                <td><input type="text" id="quantity_2" value="5"></td>
+                <td><input type="text" id="consumed_2" value="NONE"></td>
+                <td><input type="text" id="unit_price_2" value="1,220.00"></td>
+                <td><input type="text" id="total_value_2" value="6,100.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-003" id="item_code_3" value="INV-003"></td>
+                <td><input type="text" id="description_3" value="Wheelbarrow"></td>
+                <td><input type="text" id="quantity_3" value="3"></td>
+                <td><input type="text" id="consumed_3" value="NONE"></td>
+                <td><input type="text" id="unit_price_3" value="4,988.00"></td>
+                <td><input type="text" id="total_value_3" value="14,964.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-004" id="item_code_4" value="INV-004"></td>
+                <td><input type="text" id="description_3" value="HDPE Hard Hats"></td>
+                <td><input type="text" id="quantity_4" value="20"></td>
+                <td><input type="text" id="consumed_4" value="NONE"></td>
+                <td><input type="text" id="unit_price_4" value="90.00"></td>
+                <td><input type="text" id="total_value_4" value="1800.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-005" id="item_code_5" value="INV-005"></td>
+                <td><input type="text" id="description_5" value="Gloves"></td>
+                <td><input type="text" id="quantity_5" value="30 pairs"></td>
+                <td><input type="text" id="consumed_5" value=""></td>
+                <td><input type="text" id="unit_price_5" value="125.00"></td>
+                <td><input type="text" id="total_value_5" value="2500.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-006" id="item_code_6" value="INV-006"></td>
+                <td><input type="text" value=""></td>
+                <td><input type="text" id="quantity_6" value="5"></td>
+                <td><input type="text" id="consumed_6" value="NONE"></td>
+                <td><input type="text" id="unit_price_6" value="650.00"></td>
+                <td><input type="text" id="total_value_6" value="3250.00"></td>
+
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Project Status::</h3>
+    <p><strong>Weekly Labor Expenses (PHP): </strong><input type="text" id="labor" value="n"></p>
+    <p><strong>Weekly Project Expenses (PHP):</strong> <input type="text" id="actions_taken" value="38,814.00"></p>
+    <p><strong>Total Project Expenses (PHP):</strong> <input type="text" id="reconciliation_notes" value="38,814.00"></p>
+    <p><strong>Weekly Project Accomplishment (PHP):</strong> <input type="text" id="actions_taken" value="38,814.00"></p>
+    <p><strong>Project Accomplishment (PHP):</strong> <input type="text" id="actions_taken" value="38,814.00 (1.21%)"></p>
+
+    <hr>
+
+    <h3>Recommendations:</h3>
+    <p><strong>To Purchase Order:</strong></p>
+    <p><strong></strong> <input type="text" id="to_purchase_order" value=" "></p>
+    <p><strong></strong> <input type="text" id="to_purchase_order" value=" "></p>
+    <p><strong></strong> <input type="text" id="to_purchase_order" value=" "></p>
+    <hr>
+
+    <button onclick="saveChanges()">Save Changes</button>
+</div>
+
+<script>
+    // Function to save changes to localStorage
+    function saveChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            localStorage.setItem(input.id, input.value);
+        });
+        alert("Changes saved successfully!");
+    }
+
+    // Function to load saved changes from localStorage
+    function loadChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            var savedValue = localStorage.getItem(input.id);
+            if (savedValue !== null) {
+                input.value = savedValue;
+            }
+        });
+    }
+
+    // Load saved changes when the page is loaded
+    window.onload = loadChanges;
+</script>
+
+</body>
+</html>

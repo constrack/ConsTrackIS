@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="Proj info.html" class="btn btn-primary btn-lg">BACK</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Report</title>
+<style>
+    body {
+        background-color: yellowgreen;
+        font-family: "Arial Black", Arial, sans-serif;
+        color: black;
+    }
+    .container {
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1000px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: black;
+        color: white;
+    }
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: yellowgreen;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Inventory Report</h2>
+
+    <p><strong>Project Name:</strong> <input type="text" id="project_name" placeholder="Enter project name"></p>
+
+
+    <hr>
+
+    <h3>Inventory Summary:</h3>
+    <ul>
+        <li><strong>Total Inventory Value(PHP):</strong> <input type="text" id="total_inventory_value" placeholder="Enter total inventory value"></li>
+        <li><strong>Total Items in Stock:</strong> <input type="text" id="total_items_in_stock" placeholder="Enter total items in stock"></li>
+        <li><strong>Total Number of Item Types:</strong> <input type="text" id="total_item_types" placeholder="Enter total number of item types"></li>
+    </ul>
+
+    <hr>
+
+    <h3>Inventory Details:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Unit Price (PHP)</th>
+                <th>Total Value (PHP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="INV-001" id="item_code_1" placeholder="INV-001"></td>
+                <td><input type="text" id="description_1" placeholder="Enter item description"></td>
+                <td><input type="text" id="quantity_1" placeholder="Enter quantity"></td>
+                <td><input type="text" id="unit_price_1" placeholder="Enter unit price"></td>
+                <td><input type="text" id="total_value_1" placeholder="Enter total value"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-002" id="item_code_1" placeholder="INV-002"></td>
+                <td><input type="text" id="description_1" placeholder="Enter item description"></td>
+                <td><input type="text" id="quantity_1" placeholder="Enter quantity"></td>
+                <td><input type="text" id="unit_price_1" placeholder="Enter unit price"></td>
+                <td><input type="text" id="total_value_1" placeholder="Enter total value"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-003" id="item_code_1" placeholder="INV-003"></td>
+                <td><input type="text" id="description_1" placeholder="Enter item description"></td>
+                <td><input type="text" id="quantity_1" placeholder="Enter quantity"></td>
+                <td><input type="text" id="unit_price_1" placeholder="Enter unit price"></td>
+                <td><input type="text" id="total_value_1" placeholder="Enter total value"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-004" id="item_code_1" placeholder="INV-004"></td>
+                <td><input type="text" id="description_1" placeholder="Enter item description"></td>
+                <td><input type="text" id="quantity_1" placeholder="Enter quantity"></td>
+                <td><input type="text" id="unit_price_1" placeholder="Enter unit price"></td>
+                <td><input type="text" id="total_value_1" placeholder="Enter total value"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-005" id="item_code_1" placeholder="INV-005"></td>
+                <td><input type="text" id="description_1" placeholder="Enter item description"></td>
+                <td><input type="text" id="quantity_1" placeholder="Enter quantity"></td>
+                <td><input type="text" id="unit_price_1" placeholder="Enter unit price"></td>
+                <td><input type="text" id="total_value_1" placeholder="Enter total value"></td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Inventory Reconciliation:</h3>
+    <p><strong>Inventory Reconciliation Notes:</strong> <input type="text" id="reconciliation_notes" placeholder="Enter reconciliation notes"></p>
+    <p><strong>Actions Taken:</strong> <input type="text" id="actions_taken" placeholder="Enter actions taken"></p>
+
+    <hr>
+
+    <h3>Recommendations:</h3>
+    <p><strong>Inventory Optimization:</strong> <input type="text" id="inventory_optimization" placeholder="Enter inventory optimization"></p>
+    <p><strong>Inventory Control Measures:</strong> <input type="text" id="inventory_control_measures" placeholder="Enter inventory control measures"></p>
+
+    <hr>
+
+    <h3>Conclusion:</h3>
+    <p>The inventory report provides a snapshot of the project's current inventory status, including the total value of inventory, details of individual items in stock, any discrepancies or reconciliation notes, recommendations for inventory optimization, and actions to improve inventory management.</p>
+
+    <button onclick="saveChanges()">Save Changes</button>
+</div>
+
+<script>
+    // Function to save changes to localStorage
+    function saveChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            localStorage.setItem(input.id, input.value);
+        });
+        alert("Changes saved successfully!");
+    }
+
+    // Function to load saved changes from localStorage
+    function loadChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            var savedValue = localStorage.getItem(input.id);
+            if (savedValue !== null) {
+                input.value = savedValue;
+            }
+        });
+    }
+
+    // Load saved changes when the page is loaded
+    window.onload = loadChanges;
+</script>
+
+</body>
+</html>

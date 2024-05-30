@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="Proj info.html" class="btn btn-primary btn-lg">BACK</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Report</title>
+<style>
+    body {
+        background-color: yellowgreen;
+        font-family: "Arial Black", Arial, sans-serif;
+        color: black;
+    }
+    .container {
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1500px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: black;
+        color: white;
+    }
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: yellowgreen;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Inventory Report</h2>
+
+    <p><strong>Project Name:</strong> <input type="text" id="project_name" value="[Project Name]"></p>
+
+
+    <hr>
+
+    <h3>Inventory Summary:</h3>
+    <ul>
+        <li><strong>Total Inventory Value(PHP):</strong> <input type="80,324.00" id="total_inventory_value" value="80,324.00"></li>
+        <li><strong>Total Items in Stock:</strong> <input type="323" id="total_items_in_stock" value="323"></li>
+        <li><strong>Total Number of Item Types:</strong> <input type="13" id="total_item_types" value="13"></li>
+    </ul>
+
+    <hr>
+
+    <h3>Inventory Details:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Consumed</th>
+                <th>Unit Price (PHP)</th>
+                <th>Total Value (PHP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="INV-001" id="item_code_1" value="INV-001"></td>
+                <td><input type="Shovel" id="description_1" value="Shovel"></td>
+                <td><input type="10" id="quantity_1" value="10"></td>
+                <td><input type="NONE" id="consumed_1" value="NONE"></td>
+                <td><input type="420.00" id="unit_price_1" value="420.00"></td>
+                <td><input type="4,200.00" id="total_value_1" value="4,200.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-002" id="item_code_2" value="INV-002"></td>
+                <td><input type="Spade" id="description_2" value="Spade"></td>
+                <td><input type="5" id="quantity_2" value="5"></td>
+                <td><input type="NONE" id="consumed_2" value="NONE"></td>
+                <td><input type="1,220.00" id="unit_price_2" value="1,220.00"></td>
+                <td><input type="6,100.00" id="total_value_2" value="6,100.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-003" id="item_code_3" value="INV-003"></td>
+                <td><input type="Wheelbarrow" id="description_3" value="Wheelbarrow"></td>
+                <td><input type="3" id="quantity_3" value="3"></td>
+                <td><input type="NONE" id="consumed_3" value="NONE"></td>
+                <td><input type="4,988.00" id="unit_price_3" value="4,988.00"></td>
+                <td><input type="14,964.00" id="total_value_3" value="14,964.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-004" id="item_code_4" value="INV-004"></td>
+                <td><input type="HDPE Hard Hats" id="description_3" value="HDPE Hard Hats"></td>
+                <td><input type="20" id="quantity_4" value="20"></td>
+                <td><input type="NONE" id="consumed_4" value="NONE"></td>
+                <td><input type="90.00" id="unit_price_4" value="90.00"></td>
+                <td><input type="1,800.00" id="total_value_4" value="1800.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-005" id="item_code_5" value="INV-005"></td>
+                <td><input type="Gloves" id="description_5" value="Gloves"></td>
+                <td><input type="30 pairs" id="quantity_5" value="30 pairs"></td>
+                <td><input type="10 pairs" id="consumed_5" value="10 pairs"></td>
+                <td><input type="125.00" id="unit_price_5" value="125.00"></td>
+                <td><input type="2,500" id="total_value_5" value="2500.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-006" id="item_code_6" value="INV-006"></td>
+                <td><input type="Straight Corrugated Digging Bar(1x5ft)" id="description_3" value="Straight Corrugated Digging Bar(1x5ft)"></td>
+                <td><input type="5" id="quantity_6" value="5"></td>
+                <td><input type="NONE" id="consumed_6" value="NONE"></td>
+                <td><input type="650.00" id="unit_price_6" value="650.00"></td>
+                <td><input type="3,250.00" id="total_value_6" value="3250.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-007" id="item_code_7" value="INV-007"></td>
+                <td><input type="40kg of Cement" id="description_7" value="40kg of Cement"></td>
+                <td><input type="40 bags" id="quantity_7" value="40 bags"></td>
+                <td><input type="31 bags" id="consumed_7" value="31 bags"></td>
+                <td><input type="220.00" id="unit_price_7" value="220.00"></td>
+                <td><input type="8,800.00" id="total_value_7" value="8,800.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-008" id="item_code_8" value="INV-008"></td>
+                <td><input type="16mmdb Steel Bars" id="description_8" value="16mmdb Steel Bars"></td>
+                <td><input type="60" id="quantity_8" value="60"></td>
+                <td><input type="54" id="consumed_8" value="54"></td>
+                <td><input type="290.00" id="unit_price_8" value="290.00"></td>
+                <td><input type="17,400.00" id="total_value_8" value="17,400.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-009" id="item_code_9" value="INV-009"></td>
+                <td><input type="12mmdb Steel Bars" id="description_9" value="12mmdb Steel Bars"></td>
+                <td><input type="40" id="quantity_6" value="40"></td>
+                <td><input type="33" id="consumed_6" value="33"></td>
+                <td><input type="197.00" id="unit_price_6" value="197.00"></td>
+                <td><input type="7,880.00" id="total_value_6" value="7,880.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-010" id="item_code_10" value="INV-010"></td>
+                <td><input type="10mmdb Steel Bars" id="description_10" value="10mmdb Steel Bars"></td>
+                <td><input type="40" id="quantity_6" value="40"></td>
+                <td><input type="40" id="consumed_6" value="40"></td>
+                <td><input type="137.00" id="unit_price_6" value="137.00"></td>
+                <td><input type="5,480.00" id="total_value_6" value="5,480.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-011" id="item_code_11" value="INV-011"></td>
+                <td><input type="#16 tying wire" id="description_3" value="#16 tying wire"></td>
+                <td><input type="5kg" id="quantity_11" value="5kg"></td>
+                <td><input type="3.5kg" id="consumed_11" value="3.5kg"></td>
+                <td><input type="70.00" id="unit_price_11" value="70.00"></td>
+                <td><input type="350.00" id="total_value_11" value="350.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-012" id="item_code_12" value="INV-012"></td>
+                <td><input type="2inx2inx10ft Cocolumber" id="description_3" value="2inx2inx10ft Cocolumber"></td>
+                <td><input type="50" id="quantity_12" value="50"></td>
+                <td><input type="45" id="consumed_12" value="45"></td>
+                <td><input type="65.00" id="unit_price_12" value="65.00"></td>
+                <td><input type="3,250.00" id="total_value_12" value="3250.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-013" id="item_code_13" value="INV-013"></td>
+                <td><input type="1/4 Marine Plywood" id="description_3" value="1/4 Marine Plywood"></td>
+                <td><input type="10" id="quantity_13" value="10"></td>
+                <td><input type="10" id="consumed_13" value="10"></td>
+                <td><input type="435.00" id="unit_price_13" value="435.00"></td>
+                <td><input type="4,350.00" id="total_value_13" value="4,350.00"></td>
+            </tr>
+
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Project Status::</h3>
+    <p><strong>Weekly Labor Expenses (PHP): </strong><input type="6,000.00" id="labor" value="6,000.00"></p>
+    <p><strong>Weekly Project Expenses (PHP):</strong> <input type="47,510.00" id="actions_taken" value="47,510.00"></p>
+    <p><strong>Total Project Expenses (PHP):</strong> <input type="92,32400" id="reconciliation_notes" value="92,324.00"></p>
+    <p><strong>Weekly Project Accomplishment (PHP):</strong> <input type="47,981.00" id="actions_taken" value="47,981.00"></p>
+    <p><strong>Project Accomplishment (PHP):</strong> <input type="86,795.00(2.69%)" id="actions_taken" value="86,795.00(2.69%)"></p>
+
+    <hr>
+
+    <h3>Recommendations:</h3>
+    <p><strong>To Purchase Order:</strong></p>
+    <p><strong></strong> <input type="50 bags of 40kg-Cement" id="to_purchase_order" value="50 bags of 40kg-Cement"></p>
+    <p><strong></strong> <input type="40-16mmdb" id="to_purchase_order" value="40-16mmdb"></p>
+    <p><strong></strong> <input type="40-12mmdb" id="to_purchase_order" value="40-12mmdb"></p>
+    <p><strong></strong> <input type="40-10mmdb" id="to_purchase_order" value="40-10mmdb"></p>
+    <p><strong></strong> <input type="5kg-#16-tying wire" id="to_purchase_order" value="5kg-#16-tying wire"></p>
+    <p><strong></strong> <input type="30-2inx2inx10ft Cocolumber" id="to_purchase_order" value="30-2inx2inx10ft Cocolumber"></p>
+    <p><strong></strong> <input type="10-1/4 Marine Plywood" id="to_purchase_order" value="10-1/4 Marine Plywood"></p>
+
+    <hr>
+
+    <button onclick="saveChanges()">Save Changes</button>
+</div>
+
+<script>
+    // Function to save changes to localStorage
+    function saveChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            localStorage.setItem(input.id, input.value);
+        });
+        alert("Changes saved successfully!");
+    }
+
+    // Function to load saved changes from localStorage
+    function loadChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            var savedValue = localStorage.getItem(input.id);
+            if (savedValue !== null) {
+                input.value = savedValue;
+            }
+        });
+    }
+
+    // Load saved changes when the page is loaded
+    window.onload = loadChanges;
+</script>
+
+</body>
+</html>

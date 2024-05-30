@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="index.html" class="btn btn-primary btn-lg">BACK</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Story Residential Contemporary House Project</title>
+    <style>
+        body {
+            font-family: Arial Black, Arial, sans-serif;
+            background-color: #FFFFF0; /* White */
+            color: #000000; /* Black */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #9ACD32; /* Yellow Green */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #000000; /* Black */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border: 1px solid #000000; /* Black */
+            background-color: #FFFFF0; /* White */
+            display: none; /* Hide by default */
+        }
+        footer {
+            background-color: #9ACD32; /* Yellow Green */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Two-Story Residential Contemporary House Project</h1>
+        <img src="https://thumbs.dreamstime.com/b/contemporary-two-story-house-flat-roof-clean-lines-bathed-warm-sunlight-contemporary-two-story-house-flat-295958601.jpg" alt="Residential House" style="width: 100%; max-width: 500px; display: block; margin: 0 auto 20px;">
+    </header>
+   
+    <nav>
+        <a href="#" onclick="showSection('project_details')">Project Details</a>
+        <a href="#" onclick="showSection('project_update')">Project Updates</a>
+     
+    </nav>
+    <section id="project_details">
+        <h2>Project Details</h2>
+        <p>Date started: May 21, 2024</p>
+        <p>Project expected finish date: January 25, 2025</p>
+        <p>Estimated cost: 3,220,500.00 PHP</p>
+        <p>Location: Salvacion Sibalom Antique (<a href="https://www.google.com/maps/place/Salvacion,+Sibalom,+Antique/@10.7852041,122.0695833,16.5z/data=!4m6!3m5!1s0x33ae49290ff713dd:0x66d9b7d4cff62f99!8m2!3d10.7841873!4d122.0766428!16s%2Fg%2F11fyxfx6vv?entry=ttu">Google Maps</a>)</p>
+    </section>
+    <section id="project_update">
+        <h2>Project Update</h2>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>May 2024 - January 2025 Weekly Calendar</title>
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    text-align: center;
+                    padding: 50px;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+            </style>
+            <script>
+                function updateDetails(weekNumber) {
+                    var details = document.getElementById("details_" + weekNumber).value;
+                    alert("Details for Week " + weekNumber + ": " + details);
+                    // You can modify this function to perform any desired action with the entered details
+                }
+            </script>
+            </head>
+            <body>
+            
+            <h2>Weekly Calendar: May 2024 - January 2025</h2>
+            
+            <table>
+              <tr>
+                <th>Activity</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>May 20, 2024</td>
+                <td>May 24, 2024</td>
+                <td><a href="Updated proj info.html">Update</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>May 27, 2024</td>
+                <td>May 31, 2024</td>
+                <td><a href="Updated proj info - Copy.html">Update</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>June 3, 2024</td>
+                <td>June 7, 2024</td>
+                <td><a href="Updated proj info - 3.html">Update</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>June 10, 2024</td>
+                <td>June 14 2024</td>
+                <td><a href="Updated proj info - 2.html">Update</a></td>
+              </tr>
+              <!-- Continue adding rows for each week until January 2025 -->
+            </table>
+            
+            </body>
+        </ul>
+
+    <footer>
+        <p>&copy; 2024 Two-Story Residential Contemporary House Project</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

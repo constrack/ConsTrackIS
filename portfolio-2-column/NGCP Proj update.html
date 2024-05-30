@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="Proj info.html" class="btn btn-primary btn-lg">BACK</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Report</title>
+<style>
+    body {
+        background-color: yellowgreen;
+        font-family: "Arial Black", Arial, sans-serif;
+        color: black;
+    }
+    .container {
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 1000px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: black;
+        color: white;
+    }
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    button {
+        background-color: yellowgreen;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .documentation {
+        margin-top: 50px;
+    }
+    .documentation img {
+        width: 300px;
+        margin-right: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Inventory Report</h2>
+
+    <p><strong>Project Name:</strong> <input type="text" id="project_name" value="[Project Name]"></p>
+
+
+    <hr>
+
+    <h3>Inventory Summary:</h3>
+    <ul>
+        <li><strong>Total Inventory Value(PHP):</strong> <input type="32,814.00" id="total_inventory_value" value="32,814.00"></li>
+        <li><strong>Total Items in Stock:</strong> <input type="6" id="total_items_in_stock" value="6"></li>
+        <li><strong>Total Number of Item Types:</strong> <input type="6" id="total_item_types" value="6"></li>
+    </ul>
+
+    <hr>
+
+    <h3>Inventory Details:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Unit Price (PHP)</th>
+                <th>Total Value (PHP)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="INV-001" id="item_code_1" value="INV-001"></td>
+                <td><input type="Shovel" id="description_1" value="Shovel"></td>
+                <td><input type="10" id="quantity_1" value="10"></td>
+                <td><input type="420.00" id="unit_price_1" value="420.00"></td>
+                <td><input type="4,200.00" id="total_value_1" value="4,200.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-002" id="item_code_2" value="INV-002"></td>
+                <td><input type="Spade" id="description_2" value="Spade"></td>
+                <td><input type="5" id="quantity_2" value="5"></td>
+                <td><input type="1,220.00" id="unit_price_2" value="1,220.00"></td>
+                <td><input type="6,100.00" id="total_value_2" value="6,100.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-003" id="item_code_3" value="INV-003"></td>
+                <td><input type="Wheelbarrow" id="description_3" value="Wheelbarrow"></td>
+                <td><input type="3" id="quantity_3" value="3"></td>
+                <td><input type="4,988.00" id="unit_price_3" value="4,988.00"></td>
+                <td><input type="14,964.00" id="total_value_3" value="14,964.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-004" id="item_code_3" value="INV-004"></td>
+                <td><input type="HDPE Hard Hats" id="description_3" value="HDPE Hard Hats"></td>
+                <td><input type="20" id="quantity_3" value="20"></td>
+                <td><input type="90.00" id="unit_price_3" value="90.00"></td>
+                <td><input type="1,800.00" id="total_value_3" value="1800.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-005" id="item_code_3" value="INV-005"></td>
+                <td><input type="Gloves" id="description_3" value="Gloves"></td>
+                <td><input type="40 pairs" id="quantity_3" value="40 pairs"></td>
+                <td><input type="125.00" id="unit_price_3" value="125.00"></td>
+                <td><input type="2,500" id="total_value_3" value="2500.00"></td>
+            </tr>
+            <tr>
+                <td><input type="INV-006" id="item_code_3" value="INV-006"></td>
+                <td><input type="Straight Corrugated Digging Bar(1x5ft)" id="description_3" value="Straight Corrugated Digging Bar(1x5ft)"></td>
+                <td><input type="5" id="quantity_3" value="5"></td>
+                <td><input type="650.00" id="unit_price_3" value="650.00"></td>
+                <td><input type="3,250.00" id="total_value_3" value="3250.00"></td>
+            </tr>
+
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Inventory Reconciliation:</h3>
+    <p><strong>Inventory Reconciliation Notes:</strong> <input type="NONE" id="reconciliation_notes" value="NONE"></p>
+    <p><strong>Actions Taken:</strong> <input type="NONE" id="actions_taken" value="NONE"></p>
+
+    <hr>
+
+    <h3>Recommendations:</h3>
+    <p><strong>Inventory Optimization:</strong> <input type="NONE" id="inventory_optimization" value="NONE"></p>
+    <p><strong>Inventory Control Measures:</strong> <input type="NONE" id="inventory_control_measures" value="NONE"></p>
+
+    <hr>
+
+    <h3>Conclusion:</h3>
+    <p>The inventory report provides a snapshot of the project's current inventory status, including the total value of inventory, details of individual items in stock, any discrepancies or reconciliation notes, recommendations for inventory optimization, and actions to improve inventory management.</p>
+
+    <button onclick="saveChanges()">Save Changes</button>
+</div>
+
+<!-- Documentation -->
+<div class="container documentation">
+    <h3>Documentation</h3>
+    <p>You can add three pictures here:</p>
+    <div>
+        <img src="picture1.jpg" alt="Picture 1">
+        <img src="picture2.jpg" alt="Picture 2">
+        <img src="picture3.jpg" alt="Picture 3">
+    </div>
+</div>
+
+<script>
+    // Function to save changes to localStorage
+    function saveChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            localStorage.setItem(input.id, input.value);
+        });
+        alert("Changes saved successfully!");
+    }
+
+    // Function to load saved changes from localStorage
+    function loadChanges() {
+        var inputs = document.querySelectorAll('input[type="text"]');
+        inputs.forEach(function(input) {
+            var savedValue = localStorage.getItem(input.id);
+            if (savedValue !== null) {
+                input.value = savedValue;
+            }
+        });
+    }
+
+    // Load saved changes when the page is loaded
+    window.onload = loadChanges;
+</script>
+
+</body>
+</html>

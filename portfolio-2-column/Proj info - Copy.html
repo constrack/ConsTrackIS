@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="index.html" class="btn btn-primary btn-lg">BACK</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATIONAL GRID CORPORATION OF THE PHILIPPINES</title>
+    <style>
+        body {
+            font-family: Arial Black, Arial, sans-serif;
+            background-color: #FFFFF0; /* White */
+            color: #000000; /* Black */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #9ACD32; /* Yellow Green */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #000000; /* Black */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+            border: 1px solid #000000; /* Black */
+            background-color: #FFFFF0; /* White */
+            display: none; /* Hide by default */
+        }
+        footer {
+            background-color: #9ACD32; /* Yellow Green */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NATIONAL GRID CORPORATION OF THE PHILIPPINES</h1>
+        <P>100m-CABLE TRENCH</P>
+        <P>(From Tambisaan Beach to the NGCP Station)</P>
+        <img src="https://www.rappler.com/tachyon/2021/06/luzon-grid-ngcp.jpeg" alt="Residential House" style="width: 100%; max-width: 500px; display: block; margin: 0 auto 20px;">
+    </header>
+   
+    <nav>
+        <a href="#" onclick="showSection('project_details')">Project Details</a>
+        <a href="#" onclick="showSection('project_update')">Project Updates</a>
+     
+    </nav>
+    <section id="project_details">
+        <h2>Project Details</h2>
+        <p>Date started: June 5, 2023</p>
+        <p>Project finish date: August 25, 2023</p>
+        <p>Estimated cost: 2,850,900.00 PHP</p>
+        <p>Location: Tambisaan, Boracay, Malay, Aklan (<a href="https://www.google.com/maps/place/Tambisaan+Beach/@11.9507048,121.9447953,17.5z/data=!4m14!1m7!3m6!1s0x33a53f165196e75d:0x8c921b96c4ffef62!2sTambisaan+Beach!8m2!3d11.9498987!4d121.9470912!16s%2Fg%2F11fm4w6s3t!3m5!1s0x33a53f165196e75d:0x8c921b96c4ffef62!8m2!3d11.9498987!4d121.9470912!16s%2Fg%2F11fm4w6s3t?entry=ttu">Google Maps</a>)</p>
+    </section>
+    <section id="project_update">
+        <h2>Project Update</h2>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>July 2024 - August 2024 Calendar</title>
+            <style>
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    text-align: center;
+                    padding: 50px;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+            </style>
+            <script>
+                function updateDetails(weekNumber) {
+                    var details = document.getElementById("details_" + weekNumber).value;
+                    alert("Details for Week " + weekNumber + ": " + details);
+                    // You can modify this function to perform any desired action with the entered details
+                }
+            </script>
+            </head>
+            <body>
+            
+            <h2>Triweeky Calendar: June 2024 - August 2025</h2>
+            
+            <table>
+              <tr>
+                <th>Activity</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>June 5, 2023</td>
+                <td>June 23, 2023</td>
+                <td><a href="#">Update</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>June 26, 2023</td>
+                <td>July 14, 2023</td>
+                <td><a href="#">Update</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>July 17, 2023</td>
+                <td>August 4, 2023</td>
+                <td><a href="#">Update</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>August 7, 2023</td>
+                <td>August 25, 2023</td>
+                <td><a href="#">Update</a></td>
+              </tr>
+              <!-- Continue adding rows for each week until January 2025 -->
+            </table>
+            
+            </body>
+        </ul>
+
+    <footer>
+        <p>&copy; 2023 NATIONAL GRID CORPORATION OF THE PHILIPPINES</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
